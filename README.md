@@ -1,9 +1,12 @@
 # PapaGo
 [![Build Status](https://travis-ci.com/kkweon/papago.svg?branch=master)](https://travis-ci.com/kkweon/papago)
+[![GoDoc](https://godoc.org/github.com/kkweon/papago/pkg/papago?status.svg)](https://godoc.org/github.com/kkweon/papago/pkg/papago)
 
 Naver Papago GO API Wrapper
 
 ```go
+import "github.com/kkweon/papago/pkg/papago"
+
 payload := papago.Payload{
     Source: papago.En,
     Target: papago.Ko,
