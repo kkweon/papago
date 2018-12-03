@@ -21,8 +21,8 @@ func main() {
 
 	target := strings.Join(os.Args[1:], "")
 	payload := papago.Payload{
-		Source: "en",
-		Target: "ko",
+		Source: papago.En,
+		Target: papago.Ko,
 		Text:   target,
 	}
 	resp, err := papago.TranslateNMT(auth, payload)

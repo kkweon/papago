@@ -12,17 +12,47 @@ import (
 //
 // For more details, https://developers.naver.com/docs/nmt/reference/#3--%EC%9A%94%EC%B2%AD-%EB%B3%80%EC%88%98
 type Payload struct {
-	Source string `json:"source"`
-	Target string `json:"target"`
+	Source Lang   `json:"source"`
+	Target Lang   `json:"target"`
 	Text   string `json:"text"`
 }
+
+// Lang represents a language
+type Lang = string
+
+const (
+	// Ko means Korean
+	Ko Lang = "ko"
+	// En means English
+	En Lang = "en"
+	// Cn means Simplified Chinese
+	Cn Lang = "zh-CN"
+	// Tw means Traditional Chinese
+	Tw Lang = "zh-TW"
+	// Es means Spanish
+	Es Lang = "es"
+	// Fr means French
+	Fr Lang = "fr"
+	// Vi means Vietnamnese
+	Vi Lang = "vi"
+	// Th means Thai
+	Th Lang = "th"
+	// Ind means Indonesia
+	Ind Lang = "id"
+	// De means German
+	De Lang = "de"
+	// Ru means Russian
+	Ru Lang = "ru"
+	// It means Italian
+	It Lang = "it"
+)
 
 // Response represents a response from the API
 //
 // Currently, it's same as Payload, but it may change in the future
 type Response struct {
-	Source string `json:"srcLangType"`
-	Target string `json:"tarLangType"`
+	Source Lang   `json:"srcLangType"`
+	Target Lang   `json:"tarLangType"`
 	Text   string `json:"translatedText"`
 }
 

@@ -5,8 +5,8 @@ import "fmt"
 func ExampleTranslateNMT() {
 	auth, _ := GetAuthFromEnv()
 	payload := Payload{
-		Source: "en",
-		Target: "ko",
+		Source: En,
+		Target: Ko,
 		Text:   "Hello World",
 	}
 	resp, _ := TranslateNMT(auth, payload)
@@ -17,8 +17,8 @@ func ExampleTranslateNMT() {
 func ExampleTranslateSMT() {
 	auth, _ := GetAuthFromEnv()
 	payload := Payload{
-		Source: "en",
-		Target: "ko",
+		Source: En,
+		Target: Ko,
 		Text:   "Hello from Papago",
 	}
 	resp, _ := TranslateSMT(auth, payload)
